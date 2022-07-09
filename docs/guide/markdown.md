@@ -329,26 +329,19 @@ Please see [`markdown` options](../config/app-configs#markdown) for more details
 You can import code snippets from existing files via following syntax:
 
 ```md
-<<< @/filepath
-```
 
-It also supports [line highlighting](#line-highlighting-in-code-blocks):
-
-```md
-<<< @/filepath{highlightLines}
 ```
 
 **Input**
 
 ```md
-<<< @/snippets/snippet.js{2}
+
 ```
 
 **Code file**
 
 <!--lint disable strong-marker-->
 
-<<< @/snippets/snippet.js
 
 <!--lint enable strong-marker-->
 
@@ -356,7 +349,7 @@ It also supports [line highlighting](#line-highlighting-in-code-blocks):
 
 <!--lint disable strong-marker-->
 
-<<< @/snippets/snippet.js{2}
+
 
 <!--lint enable strong-marker-->
 
@@ -369,14 +362,14 @@ You can also use a [VS Code region](https://code.visualstudio.com/docs/editor/co
 **Input**
 
 ```md
-<<< @/snippets/snippet-with-region.js#snippet{1}
+
 ```
 
 **Code file**
 
 <!--lint disable strong-marker-->
 
-<<< @/snippets/snippet-with-region.js
+
 
 <!--lint enable strong-marker-->
 
@@ -384,7 +377,7 @@ You can also use a [VS Code region](https://code.visualstudio.com/docs/editor/co
 
 <!--lint disable strong-marker-->
 
-<<< @/snippets/snippet-with-region.js#snippet{1}
+
 
 <!--lint enable strong-marker-->
 
@@ -399,7 +392,7 @@ You can include a markdown file in another markdown file like this:
 
 ## Basics
 
-<!--@include: ./parts/basics.md-->
+
 ```
 
 **Part file** (`parts/basics.md`)

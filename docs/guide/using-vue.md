@@ -131,7 +131,7 @@ Later in your markdown files, the component can be interleaved between the conte
 Make sure a custom component’s name either contains a hyphen or is in PascalCase. Otherwise, it will be treated as an inline element and wrapped inside a `<p>` tag, which will lead to hydration mismatch because `<p>` does not allow block elements to be placed inside it.
 :::
 
-### Using Components In Headers <ComponentInHeader />
+### Using Components In Headers
 
 You can use Vue components in the headers, but note the difference between the following syntaxes:
 
@@ -174,26 +174,7 @@ Then you can use the following in Markdown and theme components:
 
 Sometimes you may need to apply some JavaScript or CSS only to the current page. In those cases, you can directly write root-level `<script>` or `<style>` blocks in the Markdown file. These will be hoisted out of the compiled HTML and used as the `<script>` and `<style>` blocks for the resulting Vue single-file component:
 
-<p class="demo" :class="$style.example"></p>
 
-<style module>
-.example {
-  color: #41b883;
-}
-</style>
-
-<script>
-import ComponentInHeader from '../components/ComponentInHeader.vue'
-
-export default {
-  props: ['slot-key'],
-  components: { ComponentInHeader },
-  mounted () {
-    document.querySelector(`.${this.$style.example}`)
-      .textContent = 'This is rendered by inline script and styled by inline CSS'
-  }
-}
-</script>
 
 ## Built-In Components
 
