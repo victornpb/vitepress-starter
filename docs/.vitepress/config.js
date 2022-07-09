@@ -5,7 +5,7 @@ export default {
   title: 'VitePress',
   description: 'Just playing around.',
   
-  base: '/', // The base URL the site will be deployed at (https://vitepress.vuejs.org/config/app-configs.html#base)
+  base: '/vitepress-starter/', // The base URL the site will be deployed at (https://vitepress.vuejs.org/config/app-configs.html#base)
 
   lastUpdated: true, // Use git commit to get the timestamp. This option enables the default theme to display the page's last updated time.
 
